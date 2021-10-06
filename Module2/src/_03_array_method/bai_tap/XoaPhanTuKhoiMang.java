@@ -20,16 +20,15 @@ public class XoaPhanTuKhoiMang {
             i++;
         }
         System.out.print("Property list: ");
-        int X = scanner.nextInt();
-        int index_del = 0;
+        int x = scanner.nextInt();
         int c=0;
-        for (int x = 0; x < arr.length; x++) {
-            if (arr[x] != X) {
-                arr[c]=arr[x];
+        for (int j = 0; j < arr.length; j++) {
+            if (arr[j] != x) {
+                arr[c]=arr[j];
                 c++;
             }
         }
-        for (int k = 0; k < arr.length-1; k++) {
+        for (int k = 0; k < arr.length; k++) {
             System.out.print(arr[k]);
         }
     }
