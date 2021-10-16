@@ -24,11 +24,9 @@ public class MyList <E> {
         rangeCheckForAdd(index);
         if (size == elements.length) {
             ensureCapa();
-            moveIndexForAdd(index);
-        } else {
-            moveIndexForAdd(index);
-            elements[index] = element;
         }
+        moveIndexForAdd(index);
+        elements[index] = element;
     }
 
     private void moveIndexForAdd(int index) {
