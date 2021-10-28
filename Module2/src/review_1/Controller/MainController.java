@@ -23,12 +23,15 @@ public class MainController {
             switch (choice) {
                 case 1:
                     iCandidateService.addExperience();
+                    iCandidateService.showAll();
                     break;
                 case 2:
                     iCandidateService.addFresher();
+                    iCandidateService.showAll();
                     break;
                 case 3:
                     iCandidateService.addIntern();
+                    iCandidateService.showAll();
                     break;
                 case 4:
                     iCandidateService.search();

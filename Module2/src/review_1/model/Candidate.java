@@ -1,9 +1,6 @@
 package review_1.model;
 
 public class Candidate {
-    public static final int EXPERIENCE = 0;
-    public static final int FRESHER = 1;
-    public static final int INTERN = 2;
     private int id;
     private String firstName;
     private String lastName;
@@ -25,17 +22,6 @@ public class Candidate {
         this.email = email;
     }
 
-    public static int getEXPERIENCE() {
-        return EXPERIENCE;
-    }
-
-    public static int getFRESHER() {
-        return FRESHER;
-    }
-
-    public static int getINTERN() {
-        return INTERN;
-    }
 
     public int getId() {
         return id;

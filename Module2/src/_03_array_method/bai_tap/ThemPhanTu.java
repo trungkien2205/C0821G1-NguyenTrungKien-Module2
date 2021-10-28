@@ -6,7 +6,7 @@ public class ThemPhanTu {
     public static void main(String[] args) {
         int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 0, 0};
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter number: ");
+        System.out.println("Enter country.csv: ");
         int num = scanner.nextInt();
         System.out.println("Enter index: ");
         byte index = scanner.nextByte();

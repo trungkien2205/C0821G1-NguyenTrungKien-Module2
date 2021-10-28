@@ -17,8 +17,8 @@ public class CandidateService implements ICandidateService {
     public static ArrayList<Candidate> candidateList = new ArrayList<>();
 
     static {
-        candidateList.add(new Experience(1, "kien", "Nguyen", 1234, "dn", 123123123, "abc", 123, "abc"));
-        candidateList.add(new FresherCandidate(1, "kien", "Nguyen", 1234, "dn", 123123123, "abc", 123, "abc", "abc"));
+        candidateList.add(new Experience(1, "kien", "Nguyen", 1234, "dn", 1231231234, "abc", 123, "abc"));
+        candidateList.add(new FresherCandidate(2, "nguyen", "kien", 3456, "hn", 1231231231, "abcd", 123, "abc", "abc"));
     }
 
 

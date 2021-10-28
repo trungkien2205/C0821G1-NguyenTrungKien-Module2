@@ -8,7 +8,7 @@ public class TinhTienLai {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter investment amount: ");
         money = input.nextDouble();
-        System.out.println("Enter number of months: ");
+        System.out.println("Enter country.csv of months: ");
         month = input.nextInt();
         System.out.println("Enter annual interest rate in percentage: ");
         interset_rate = input.nextDouble();
