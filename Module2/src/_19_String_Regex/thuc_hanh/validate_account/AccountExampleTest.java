@@ -1,4 +1,6 @@
-package bai_19_string_va_regex.thuc_hanh.validate_account;
+package _19_String_Regex.thuc_hanh.validate_account;
+
+import _19_String_Regex.thuc_hanh.validate_account.AccountExample;
 
 public class AccountExampleTest {
     private static AccountExample accountExample;

@@ -1,4 +1,4 @@
-package bai_19_string_va_regex.bai_tap.validate_so_dien_thoai;
+package _19_String_Regex.bai_tap.validate_so_dien_thoai;
 
 import java.util.Scanner;
 

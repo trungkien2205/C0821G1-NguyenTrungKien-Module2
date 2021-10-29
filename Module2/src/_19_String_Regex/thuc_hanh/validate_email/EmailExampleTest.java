@@ -1,4 +1,4 @@
-package bai_19_string_va_regex.thuc_hanh.validate_email;
+package _19_String_Regex.thuc_hanh.validate_email;
 
 public class EmailExampleTest {
     private static EmailExample emailExample;
