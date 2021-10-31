@@ -1,18 +1,18 @@
-package review_1.model;
+package review_2.model;
 
 public abstract class Candidate {
     private int id;
     private String firstName;
     private String lastName;
-    private int birthDay;
+    private String birthDay;
     private String address;
-    private int phone;
+    private String phone;
     private String email;
 
     public Candidate() {
     }
 
-    public Candidate(int id, String firstName, String lastName, int birthDay, String address, int phone, String email) {
+    public Candidate(int id, String firstName, String lastName, String birthDay, String address, String phone, String email) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -22,7 +22,15 @@ public abstract class Candidate {
         this.email = email;
     }
 
-
+    public Candidate(String[] string){
+        this.id= Integer.parseInt(string[0]);
+        this.firstName=string[1];
+        this.lastName=string[2];
+        this.birthDay=string[3];
+        this.address=string[4];
+        this.phone=string[5];
+        this.email=string[6];
+    }
     public int getId() {
         return id;
     }
@@ -47,11 +55,11 @@ public abstract class Candidate {
         this.lastName = lastName;
     }
 
-    public int getBirthDay() {
+    public String getBirthDay() {
         return birthDay;
     }
 
-    public void setBirthDay(int birthDay) {
+    public void setBirthDay(String birthDay) {
         this.birthDay = birthDay;
     }
 
@@ -63,11 +71,11 @@ public abstract class Candidate {
         this.address = address;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -81,14 +89,6 @@ public abstract class Candidate {
 
     @Override
     public String toString() {
-        return "Candidate{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", birthDay=" + birthDay +
-                ", address='" + address + '\'' +
-                ", phone=" + phone +
-                ", email='" + email + '\'' +
-                '}';
+        return  id + "," + firstName + "," + lastName + "," + birthDay + "," + address + '\'' + "," + phone + "," + email ;
     }
 }

@@ -1,12 +1,11 @@
 package review_1.service.impl;
 
-import com.sun.xml.internal.ws.developer.MemberSubmissionAddressing;
 import review_1.model.Candidate;
 import review_1.model.Experience;
 import review_1.model.FresherCandidate;
 import review_1.model.InternCandidate;
 import review_1.service.ICandidateService;
-import review_1.utils.Validation;
+import review_1.Common.Validation;
 
 import java.util.ArrayList;
 import java.util.Scanner;
