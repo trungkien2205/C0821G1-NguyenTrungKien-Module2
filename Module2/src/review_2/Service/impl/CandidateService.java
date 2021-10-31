@@ -16,11 +16,37 @@ public class CandidateService implements ICandidateService {
 
     @Override
     public void search() {
-        showAll();
         ReadWriteFile read = new ReadWriteFile();
-        List<Experience> list0 = read.read("src/review_2/Data/Experience.csv");
-        List<FresherCandidate> list1 = read.read("src/review_2/Data/Fresher.csv");
-        List<InternCandidate> list2 = read.read("src/review_2/Data/Intern.csv");
+        List<String[]> list0 = read.read("src/review_2/Data/Experience.csv");
+        List<String[]> list1 = read.read("src/review_2/Data/Fresher.csv");
+        List<String[]> list2 = read.read("src/review_2/Data/Intern.csv");
+        List<Experience> exp = new ArrayList<>();
+        for (String[] string : list0) {
+            Experience experience = new Experience(string);
+            exp.add(experience);
+        }
+        System.out.println("========= EXPERIENCE CANDIDATE ========");
+        for (Experience e : exp) {
+            System.out.println(e.getFirstName() + " " + e.getLastName());
+        }
+        List<FresherCandidate> fresh = new ArrayList<>();
+        for (String[] string : list1) {
+            FresherCandidate freshCandidate = new FresherCandidate(string);
+            fresh.add(freshCandidate);
+        }
+        System.out.println("========= FRESHER CANDIDATE ========");
+        for (FresherCandidate f : fresh) {
+            System.out.println(f.getFirstName() + " " + f.getLastName());
+        }
+        List<InternCandidate> intern = new ArrayList<>();
+        for (String[] string : list2) {
+            InternCandidate internCandidate = new InternCandidate(string);
+            intern.add(internCandidate);
+        }
+        System.out.println("========= INTERN CANDIDATE ========");
+        for (InternCandidate i : intern) {
+            System.out.println(i.getFirstName() + " " + i.getLastName());
+        }
         System.out.println("Input Candidate Name :");
         String name = scanner.nextLine();
         System.out.println("Input type of candidate :" + '\n'
@@ -31,12 +57,12 @@ public class CandidateService implements ICandidateService {
         int choice = Integer.parseInt(scanner.nextLine());
         switch (choice) {
             case 0:
-                if (list0.size() == 0) {
+                if (exp.size() == 0) {
                     System.out.println("empty!");
                 } else {
-                    for (int i = 0; i < list0.size(); i++) {
-                        if (name.equals(list0.get(i).getFirstName()) || name.equals(list0.get(i).getLastName())) {
-                            System.out.println(list0.get(i).toString());
+                    for (int i = 0; i < exp.size(); i++) {
+                        if (exp.get(i).getFirstName().equals(name) || exp.get(i).getLastName().equals(name)) {
+                            System.out.println(exp.get(i).toString());
                         } else {
                             System.out.println("Not found!");
                         }
@@ -44,12 +70,12 @@ public class CandidateService implements ICandidateService {
                 }
                 break;
             case 1:
-                if (list0.size() == 0) {
+                if (fresh.size() == 0) {
                     System.out.println("empty!");
                 } else {
-                    for (int i = 0; i < list1.size(); i++) {
-                        if (name.equals(list1.get(i).getFirstName()) || name.equals(list1.get(i).getLastName())) {
-                            System.out.println(list1.get(i).toString());
+                    for (int i = 0; i < fresh.size(); i++) {
+                        if (fresh.get(i).getFirstName().equals(name) || fresh.get(i).getLastName().equals(name)) {
+                            System.out.println(fresh.get(i).toString());
                         } else {
                             System.out.println("Not found!");
                         }
@@ -57,12 +83,12 @@ public class CandidateService implements ICandidateService {
                 }
                 break;
             case 2:
-                if (list0.size() == 0) {
+                if (intern.size() == 0) {
                     System.out.println("empty!");
                 } else {
-                    for (int i = 0; i < list2.size(); i++) {
-                        if (name.equals(list2.get(i).getFirstName()) || name.equals(list2.get(i).getLastName())) {
-                            System.out.println(list2.get(i).toString());
+                    for (int i = 0; i < intern.size(); i++) {
+                        if (intern.get(i).getFirstName().equals(name) || intern.get(i).getLastName().equals(name)) {
+                            System.out.println(intern.get(i).toString());
                         } else {
                             System.out.println("Not found!");
                         }
@@ -78,8 +104,8 @@ public class CandidateService implements ICandidateService {
         List<String[]> list1 = read.read("src/review_2/Data/Fresher.csv");
         List<String[]> list2 = read.read("src/review_2/Data/Intern.csv");
         List<Experience> exp = new ArrayList<>();
-        for (String[] string : list0){
-            Experience experience =new Experience(string);
+        for (String[] string : list0) {
+            Experience experience = new Experience(string);
             exp.add(experience);
         }
         System.out.println("========= EXPERIENCE CANDIDATE ========");
@@ -87,8 +113,8 @@ public class CandidateService implements ICandidateService {
             System.out.println(e.getFirstName() + " " + e.getLastName());
         }
         List<FresherCandidate> fresh = new ArrayList<>();
-        for (String[] string : list1){
-            FresherCandidate freshCandidate =new FresherCandidate(string);
+        for (String[] string : list1) {
+            FresherCandidate freshCandidate = new FresherCandidate(string);
             fresh.add(freshCandidate);
         }
         System.out.println("========= FRESHER CANDIDATE ========");
@@ -96,8 +122,8 @@ public class CandidateService implements ICandidateService {
             System.out.println(f.getFirstName() + " " + f.getLastName());
         }
         List<InternCandidate> intern = new ArrayList<>();
-        for (String[] string : list2){
-            InternCandidate internCandidate =new InternCandidate(string);
+        for (String[] string : list2) {
+            InternCandidate internCandidate = new InternCandidate(string);
             intern.add(internCandidate);
         }
         System.out.println("========= INTERN CANDIDATE ========");
