@@ -6,7 +6,7 @@ public class Validation {
     static Scanner scanner = new Scanner(System.in);
 
     public static String inputEmail() {
-        String checkEmail = "";
+        String checkEmail = null;
         boolean check = true;
         while (check) {
             System.out.println("Enter email: ");
@@ -56,14 +56,14 @@ public class Validation {
         return input;
     }
 
-    public static int checkExpInYear(){
-        int checkexPlnYear = 0;
+    public static String checkExpInYear(){
+        String checkexPlnYear = null;
         boolean check = true;
         while (check) {
             System.out.println("Enter year of Experience : ");
 
-            checkexPlnYear = Integer.parseInt(scanner.nextLine());
-            if (checkexPlnYear<0 || checkexPlnYear>100) {
+            checkexPlnYear = scanner.nextLine();
+            if (!checkexPlnYear.matches("[0-9]{1,2}")) {
                 System.out.println("No matches");
 
             } else {
@@ -74,7 +74,7 @@ public class Validation {
     }
 
     public static String choiceGraduationRank(){
-        String graduationRank="";
+        String graduationRank=null;
 
         System.out.println("Choice Graduation Rank");
         System.out.println("1. Excellent");

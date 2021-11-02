@@ -24,7 +24,7 @@ public class ExperienceService implements IExperienceService {
         String birthDay = Validation.inputBirthDay();
         String email = Validation.inputEmail();
         String phone = Validation.inputPhone();
-        int exPlnyear = Validation.checkExpInYear();
+        String exPlnyear = Validation.checkExpInYear();
         System.out.println("Enter Pro Skill :");
         String proSkill = scanner.nextLine();
         Experience experience = new Experience(id, firstName, lastName, birthDay, address, phone, email, exPlnyear, proSkill);
