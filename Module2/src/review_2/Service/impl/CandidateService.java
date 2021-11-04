@@ -16,10 +16,13 @@ public class CandidateService implements ICandidateService {
 
     @Override
     public void search() {
+        showAll();
         ReadWriteFile read = new ReadWriteFile();
         List<String[]> list0 = read.read("src/review_2/Data/Experience.csv");
         List<String[]> list1 = read.read("src/review_2/Data/Fresher.csv");
         List<String[]> list2 = read.read("src/review_2/Data/Intern.csv");
+
+
         List<Experience> exp = new ArrayList<>();
         for (String[] string : list0) {
             Experience experience = new Experience(string);
@@ -29,6 +32,8 @@ public class CandidateService implements ICandidateService {
         for (Experience e : exp) {
             System.out.println(e.getFirstName() + " " + e.getLastName());
         }
+
+
         List<FresherCandidate> fresh = new ArrayList<>();
         for (String[] string : list1) {
             FresherCandidate freshCandidate = new FresherCandidate(string);
@@ -38,6 +43,8 @@ public class CandidateService implements ICandidateService {
         for (FresherCandidate f : fresh) {
             System.out.println(f.getFirstName() + " " + f.getLastName());
         }
+
+
         List<InternCandidate> intern = new ArrayList<>();
         for (String[] string : list2) {
             InternCandidate internCandidate = new InternCandidate(string);
@@ -103,6 +110,8 @@ public class CandidateService implements ICandidateService {
         List<String[]> list0 = read.read("src/review_2/Data/Experience.csv");
         List<String[]> list1 = read.read("src/review_2/Data/Fresher.csv");
         List<String[]> list2 = read.read("src/review_2/Data/Intern.csv");
+
+
         List<Experience> exp = new ArrayList<>();
         for (String[] string : list0) {
             Experience experience = new Experience(string);
@@ -112,6 +121,8 @@ public class CandidateService implements ICandidateService {
         for (Experience e : exp) {
             System.out.println(e.getFirstName() + " " + e.getLastName());
         }
+
+
         List<FresherCandidate> fresh = new ArrayList<>();
         for (String[] string : list1) {
             FresherCandidate freshCandidate = new FresherCandidate(string);
@@ -121,6 +132,8 @@ public class CandidateService implements ICandidateService {
         for (FresherCandidate f : fresh) {
             System.out.println(f.getFirstName() + " " + f.getLastName());
         }
+
+
         List<InternCandidate> intern = new ArrayList<>();
         for (String[] string : list2) {
             InternCandidate internCandidate = new InternCandidate(string);
@@ -131,7 +144,4 @@ public class CandidateService implements ICandidateService {
             System.out.println(i.getFirstName() + " " + i.getLastName());
         }
     }
-
-
 }
-
